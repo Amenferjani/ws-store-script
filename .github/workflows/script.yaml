@@ -1,9 +1,9 @@
 name: Netflix Email Check
 
 on:
-  schedule:
-    - cron: '*/5 * * * *'
   workflow_dispatch:
+  repository_dispatch:
+    types: [cron-trigger]
   push:
     branches: [main]
 
